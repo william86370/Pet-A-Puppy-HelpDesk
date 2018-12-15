@@ -155,12 +155,12 @@
         text-align: right;
         background-color: #FFFFFF;
     }
-        .auto-style44 {
-            width: 579px;
-            text-align: center;
-            height: 296px;
-            background-color: #FFFFFF;
-        }
+    .auto-style44 {
+        width: 579px;
+        text-align: center;
+        height: 296px;
+        background-color: #FFFFFF;
+    }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">

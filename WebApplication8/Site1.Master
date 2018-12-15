@@ -71,8 +71,8 @@
 &nbsp;Pet A Puppy Error Reporting</strong></span></h1>
         <p class="auto-style11">
             <strong><asp:Button ID="Supportbtn" runat="server" CssClass="auto-style12" Height="34px" Text="Support Log in" Width="108px" BorderStyle="None" Font-Bold="True" OnClick="Button1_Click" />
-            <asp:Button ID="Errorbtn" runat="server" CssClass="auto-style12" Height="34px" Text="Error Reporting" Width="108px" BorderStyle="None" Font-Bold="True" OnClick="Button2_Click" />
             <asp:Button ID="MainMenubtn" runat="server" CssClass="auto-style12" Height="34px" Text="Main Menu" Width="108px" BorderStyle="None" Font-Bold="True" OnClick="Button2_Click" />
+            <asp:Button ID="Errorbtn" runat="server" CssClass="auto-style12" Height="34px" Text="Error Reporting" Width="108px" BorderStyle="None" Font-Bold="True" OnClick="Button2_Click" />
             </strong>
         </p>
         <p class="auto-style13">
