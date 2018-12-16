@@ -11,8 +11,21 @@ using System.Data.SqlClient;
 namespace WebApplication8
   
 {
+   
     public partial class WebForm3 : System.Web.UI.Page
     {
+
+        protected void Page_PreInit(Object sender, EventArgs e)
+        {
+            if (DateTime.Now.Month == 12)//this checks if its december
+            {
+                Page.Theme = "christmas";//set the theme to december
+            }
+            else
+            {
+                Page.Theme = "DefaultTheme";//set the theme to normal
+            }
+        }
         //first we declaare our diffrent tests for the fields
         bool usernamegood = false;
         bool passwordgood = false;

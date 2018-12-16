@@ -78,6 +78,8 @@
     <Content Include="App_Data\WebApplication8_log.ldf">
       <DependentUpon>WebApplication8.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Themes\christmas\christmas.css" />
+    <Content Include="App_Themes\DefaultTheme\Defaulttheme.css" />
     <Content Include="css Stlying\main.css" />
     <Content Include="icon\dogicon.png" />
     <Content Include="Web.config">
@@ -130,6 +132,7 @@
     <None Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
+    <Content Include="Web.sitemap" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />

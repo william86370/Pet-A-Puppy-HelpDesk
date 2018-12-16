@@ -9,13 +9,14 @@ namespace WebApplication8
 {
     public partial class Site1 : System.Web.UI.MasterPage
     {
-        protected void Page_Load(object sender, EventArgs e)
-        {
-
-        }
+            protected void Page_Load(object sender, EventArgs e)
+            {
+            
+             }
 
         protected void Button1_Click(object sender, EventArgs e)//i changed the values in the designer but they dont update here :(
         {
+           
             Response.Redirect("Login.aspx"); //when user clicks tewch login redirect to subview
         }
 

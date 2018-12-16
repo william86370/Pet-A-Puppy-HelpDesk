@@ -18,7 +18,6 @@
             margin-top: 0px;
         }
         .auto-style8 {
-            background-color: #CCCCCC;
             height: 1571px;
             width: 2764px;
         }
@@ -68,9 +67,9 @@
     <form id="form1" runat="server" class="auto-style8">
         <h1 class="auto-style4" aria-multiselectable="False"><span class="auto-style3"><strong>
             <asp:Image ID="Image1" runat="server" CssClass="auto-style14" Height="83px" ImageAlign="AbsMiddle" ImageUrl="~/icon/dogicon.png" Width="114px" />
-&nbsp;Pet A Puppy Error Reporting</strong></span></h1>
+&nbsp;Pet A Puppy</strong></span></h1>
         <p class="auto-style11">
-            <strong><asp:Button ID="Supportbtn" runat="server" CssClass="auto-style12" Height="34px" Text="Support Log in" Width="108px" BorderStyle="None" Font-Bold="True" OnClick="Button1_Click" />
+            <strong class="auto-style8"><asp:Button ID="Supportbtn" runat="server" CssClass="auto-style12" Height="34px" Text="Support Log in" Width="108px" BorderStyle="None" Font-Bold="True" OnClick="Button1_Click" />
             <asp:Button ID="MainMenubtn" runat="server" CssClass="auto-style12" Height="34px" Text="Main Menu" Width="108px" BorderStyle="None" Font-Bold="True" OnClick="Button2_Click" />
             <asp:Button ID="Errorbtn" runat="server" CssClass="auto-style12" Height="34px" Text="Error Reporting" Width="108px" BorderStyle="None" Font-Bold="True" OnClick="Button2_Click" />
             </strong>

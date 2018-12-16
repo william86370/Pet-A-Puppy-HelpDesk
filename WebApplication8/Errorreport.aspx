@@ -93,7 +93,7 @@
     .auto-style33 {
         width: 1432px;
         height: 21px;
-        text-align: center;
+        text-align: left;
         color: #FFFFFF;
         margin-left: 226px;
         margin-top: 0px;
@@ -165,7 +165,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p class="auto-style33">
-        &nbsp;</p>
+        <asp:SiteMapPath ID="SiteMapPath2" runat="server">
+        </asp:SiteMapPath>
+</p>
     <p class="auto-style31">
     Thank You For Visiting Our Support Website</p>
 <p class="auto-style32">

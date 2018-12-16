@@ -45,7 +45,6 @@
     .auto-style20 {
         width: 1434px;
         height: 28px;
-        text-align: center;
         color: #FFFFFF;
         margin-left: 226px;
         margin-top: 0px;
@@ -75,24 +74,30 @@
 </asp:Content>
 <asp:Content ID="Login" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p class="auto-style20">
-        &nbsp;</p>
+        <asp:SiteMapPath ID="SiteMapPath2" runat="server" Font-Names="Verdana" Font-Size="0.8em" PathSeparator=" : ">
+            <CurrentNodeStyle ForeColor="#333333" />
+            <NodeStyle Font-Bold="True" ForeColor="#284E98" />
+            <PathSeparatorStyle Font-Bold="True" ForeColor="#507CD1" />
+            <RootNodeStyle Font-Bold="True" ForeColor="#507CD1" />
+        </asp:SiteMapPath>
+</p>
 <p class="auto-style21">
     Pet A Puppy Tech Login</p>
 <p class="auto-style21">
             <asp:Label ID="Globalerror" runat="server" CssClass="auto-style23" Text="Invalid login, Please Try Again" Visible="False"></asp:Label>
         </p>
-<table class="auto-style22" border="0">
+<table class="auto-style22">
     <tr>
         <td class="auto-style15">Username:&nbsp;&nbsp; </td>
-        <td class="auto-style16">
+        <td class="auto-style16" style="border-width: 0px">
             <asp:TextBox ID="Usernametxtbox" runat="server" BorderColor="Black" Width="199px"></asp:TextBox>
         &nbsp;&nbsp;
             <asp:Label ID="usernameerrorlbl" runat="server" CssClass="auto-style23" Text="The username you Enterned is incorrect " Visible="False"></asp:Label>
         </td>
     </tr>
     <tr>
-        <td class="auto-style15">Password:&nbsp;&nbsp; </td>
-        <td class="auto-style17">
+        <td class="auto-style15" colspan="0">Password:&nbsp;&nbsp; </td>
+        <td class="auto-style17" colspan="0" style="border-width: 0px">
             <asp:TextBox ID="Passwordtxtbox" runat="server" BorderColor="Black" Width="199px"></asp:TextBox>
         &nbsp;&nbsp;
             <asp:Label ID="passworderrorlbl" runat="server" CssClass="auto-style23" Text="The Password You entered Is incorrect" Visible="False"></asp:Label>
@@ -100,7 +105,7 @@
     </tr>
     <tr>
         <td class="auto-style15">2-Factor Code:&nbsp;&nbsp; </td>
-        <td class="auto-style17">
+        <td class="auto-style17" colspan="0" rowspan="0" style="border-width: 0px">
             <asp:TextBox ID="factortext" runat="server" BorderColor="Black" Width="199px"></asp:TextBox>
         &nbsp;&nbsp;
             <asp:Label ID="factorerrorlbl" runat="server" CssClass="auto-style23" Text="The 2-Factor Code is Incorrect" Visible="False"></asp:Label>

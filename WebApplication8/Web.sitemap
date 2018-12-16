@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" >
+  <siteMapNode url="Errorreport.aspx" title="Error Reporting"  description="User Report Error Page">
+    <siteMapNode url="Login.aspx" title="Login"  description="The Page Where Tech Support Can Login" >
+       <siteMapNode url="Loggedin.aspx" title="Tech Support"  description="Landing Page For Logged In Tech" />
+       </siteMapNode>
+  </siteMapNode>
+</siteMap>
