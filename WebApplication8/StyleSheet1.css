@@ -1,0 +1,49 @@
+﻿body {
+}
+a:active {
+    font-family: Calibri;
+    font-size: medium;
+    font-weight: normal;
+    font-style: normal;
+    font-variant: normal;
+    text-transform: none;
+    color: #000000;
+    line-height: normal;
+    vertical-align: middle;
+    text-align: center;
+    text-indent: inherit;
+    word-spacing: normal;
+    white-space: normal;
+    letter-spacing: normal;
+}
+.newStyle1 {
+    text-align: left;
+    vertical-align: middle;
+}
+.Textbox {
+    height: 349px;
+    margin-top: 0px;
+    background-color: #474F53;
+    margin-bottom: 0px;
+    font-size: large;
+    color: #FFFFFF;
+    width: 419px;
+    margin-left: 0px;
+    position: absolute;
+    left: 40%;
+    top: 15%;
+    right: 871px;
+}
+.optionMenu {
+    font-family: "Arial Narrow";
+    font-size: medium;
+    color: #FFFFFF;
+    vertical-align: middle;
+    text-align: center;
+    background-color: #474F53;
+    position: absolute;
+    left: 70%;
+    width: 100px;
+    height: 200px;
+    top: 20%;
+}

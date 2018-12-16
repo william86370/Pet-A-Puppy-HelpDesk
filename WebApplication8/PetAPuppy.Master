@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site2.master.cs" Inherits="PetaPuppy.Site2" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            text-align: center;
+        }
+        .auto-style4 {
+            font-size: large;
+            color: #000000;
+        }
+        .NavbarText {
+            text-align: left;
+            vertical-align: middle;
+            font-family: "Kozuka Gothic Pr6N R";
+            font-size: xx-large;
+            color: #FFFFFF;
+            border-style: none none solid none;
+            border-width: 1px;
+            border-color: #FFFFFF;
+        }
+        .auto-style6 {
+            text-align: left;
+            margin-left: 0px;
+            margin-top: 5px;
+            vertical-align: middle;
+            font-family: "Kozuka Gothic Pr6N R";
+            font-size: xx-large;
+            color: #000000;
+        }
+        .NavbarButton {
+            text-align: right;
+            vertical-align: middle;
+            font-family: "Microsoft JhengHei";
+            font-size: small;
+            color: #000000;
+            border-style: none;
+            font-weight: normal;
+            white-space: normal;
+            word-spacing: normal;
+            letter-spacing: normal;
+        }
+        .Backround {
+            background-image: none;
+            background-repeat: no-repeat;
+            background-color: #808080;
+        }
+        .auto-style7 {
+            border-left: 1px none #FFFFFF;
+            border-right: 1px none #FFFFFF;
+            border-top: 1px none #FFFFFF;
+            border-bottom: 1px solid #FFFFFF;
+            text-align: left;
+            vertical-align: middle;
+            font-family: "Kozuka Gothic Pr6N R";
+            font-size: xx-large;
+            color: #FFFFFF;
+            height: 87px;
+            background-color: #3B454A;
+            border-style: none;
+        }
+        .NavbarButtonText {
+            text-align: center;
+            font-family: "Microsoft JhengHei";
+            font-size: small;
+            color: #FFFFFF;
+            border-style: none;
+            background-color: transparent;
+            line-height: normal;
+            position: relative;
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body class="Backround">
+    <form id="form1" runat="server" class="Backround">
+        <div class="auto-style1">
+            <div class="auto-style7">
+&nbsp;&nbsp;
+                <asp:Image ID="Image1" runat="server" CssClass="auto-style6" Height="77px" ImageUrl="~/icon/dogicon.png" Width="92px" />
+&nbsp;&nbsp; Pet A Puppy<span class="NavbarButton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="ErrorReportButton" runat="server" BorderStyle="None" CssClass="NavbarButtonText" Height="26px" Text="Error Reporting" Width="111px" />
+&nbsp;&nbsp;&nbsp;&nbsp;
+                <asp:Button ID="Techloginbtn" runat="server" BorderStyle="None" CssClass="NavbarButtonText" Height="26px" Text="Tech Login" Width="111px" />
+                </span>
+                <br class="auto-style4" />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            </div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

@@ -81,13 +81,21 @@
     <Content Include="App_Themes\christmas\christmas.css" />
     <Content Include="App_Themes\DefaultTheme\Defaulttheme.css" />
     <Content Include="css Stlying\main.css" />
+    <Content Include="icon\65xgAV.jpg" />
+    <Content Include="icon\Bright-Blue1.jpg" />
     <Content Include="icon\dogicon.png" />
+    <Content Include="icon\download.jpg" />
+    <Content Include="StyleSheet1.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
     <Content Include="Errorreport.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Loggedin.aspx" />
+    <Content Include="index.aspx" />
+    <Content Include="SupportTicket.aspx" />
+    <Content Include="ReportSubmitRedirect.aspx" />
+    <Content Include="TechSupportMain.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -119,6 +127,41 @@
     <Compile Include="Loggedin.aspx.designer.cs">
       <DependentUpon>Loggedin.aspx</DependentUpon>
     </Compile>
+    <Compile Include="PetAPuppy.Master.cs">
+      <DependentUpon>PetAPuppy.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PetAPuppy.Master.designer.cs">
+      <DependentUpon>PetAPuppy.Master</DependentUpon>
+    </Compile>
+    <Compile Include="index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SupportTicket.aspx.cs">
+      <DependentUpon>SupportTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SupportTicket.aspx.designer.cs">
+      <DependentUpon>SupportTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReportSubmitRedirect.aspx.cs">
+      <DependentUpon>ReportSubmitRedirect.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReportSubmitRedirect.aspx.designer.cs">
+      <DependentUpon>ReportSubmitRedirect.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="TechSupportMain.aspx.cs">
+      <DependentUpon>TechSupportMain.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="TechSupportMain.aspx.designer.cs">
+      <DependentUpon>TechSupportMain.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config">
@@ -126,6 +169,7 @@
     </None>
     <Content Include="Site1.Master" />
     <None Include="Properties\PublishProfiles\PetAPuppyHelpDesk20181215015755 - Web Deploy.pubxml" />
+    <Content Include="PetAPuppy.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
