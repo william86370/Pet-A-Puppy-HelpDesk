@@ -13,16 +13,18 @@ namespace PetaPuppy
 {
     public partial class WebForm5 : System.Web.UI.Page
     {
-
+        string Loggedintech;
+        string acesscode;
         protected void Page_Load(object sender, EventArgs e)
         {
-            string Loggedintech = Session["Tech"].ToString();
-            string acesscode = Session["verify"].ToString();
+             Loggedintech = Session["Tech"].ToString();
+             acesscode = Session["verify"].ToString();
             if (acesscode != "8637007368")
             {
                 Server.Transfer("~/index.aspx");
             }
             USernamelbl.Text = "Welcome " + Loggedintech + " ";
+            Usernamesignedinlbl.Text = Loggedintech;
         }
         protected void ListView1_ItemDataBound(object sender, ListViewItemEventArgs e)//THIS TOOK FOREVER TO FIND OUT
         {
@@ -99,7 +101,15 @@ namespace PetaPuppy
 
         protected void EditTicketbtn_Click(object sender, EventArgs e)
         {
+            Session["TicketID"] = TicketEditBox.Text;
+            Session["Tech"] = Loggedintech;
+            Session["verify"] = acesscode;
+            Server.Transfer("~/EditTicket.aspx");
+        }
 
+        protected void Button9_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("~/index.aspx");
         }
     }
 }

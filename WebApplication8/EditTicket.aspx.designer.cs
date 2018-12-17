@@ -13,58 +13,76 @@ namespace PetaPuppy {
     public partial class WebForm6 {
         
         /// <summary>
-        /// Label1 control.
+        /// getusers control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.SqlDataSource getusers;
         
         /// <summary>
-        /// ReportNamebox control.
+        /// Reportnamelbl control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox ReportNamebox;
+        protected global::System.Web.UI.WebControls.Label Reportnamelbl;
         
         /// <summary>
-        /// UsernameBox control.
+        /// datecreated control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox UsernameBox;
+        protected global::System.Web.UI.WebControls.Label datecreated;
         
         /// <summary>
-        /// EmailBox control.
+        /// ReportNamebox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox EmailBox;
+        protected global::System.Web.UI.WebControls.TextBox ReportNamebox2;
         
         /// <summary>
-        /// DescriptionBox control.
+        /// UsernameBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox DescriptionBox;
+        protected global::System.Web.UI.WebControls.TextBox UsernameBox2;
         
         /// <summary>
-        /// StepsBox control.
+        /// EmailBox2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox StepsBox;
+        protected global::System.Web.UI.WebControls.TextBox EmailBox2;
+        
+        /// <summary>
+        /// DescriptionBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox DescriptionBox2;
+        
+        /// <summary>
+        /// StepsBox2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox StepsBox2;
         
         /// <summary>
         /// Crashlist control.
@@ -91,15 +109,24 @@ namespace PetaPuppy {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox AssignTechbox;
+        protected global::System.Web.UI.WebControls.DropDownList AssignTechbox;
         
         /// <summary>
-        /// SubmitReportbtn control.
+        /// Button2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button SubmitReportbtn;
+        protected global::System.Web.UI.WebControls.Button Button2;
+        
+        /// <summary>
+        /// Button1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button Button1;
     }
 }

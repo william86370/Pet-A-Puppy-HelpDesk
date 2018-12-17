@@ -14,7 +14,7 @@
             color: #FFFFFF;
             width: 53%;
             margin-left: 0px;
-            position: fixed;
+            position: absolute;
             left: 18%;
             top: 15%;
         }
@@ -27,7 +27,7 @@
             background-color: #474F53;
             position: absolute;
             width: 10%;
-            height: 30%;
+            height: 38%;
             top: 15%;
             left: 72%;
             margin-bottom: 0px;
@@ -45,12 +45,13 @@
             background-color: #474F53;
             position: absolute;
             width: 10%;
-            height: 30%;
-            top: 15%;
-            left: 7.75%;
+            height: 35%;
+            top: 55%;
+            left: 72%;
+            margin-bottom: 0px;
             margin-top: 0px;
         }
-    </style>
+        </style>
 </asp:Content>
 
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -58,7 +59,6 @@
     <p class="auto-style9">
         <br />
         <asp:Label ID="USernamelbl" runat="server" Text="Welcome %USERNAME%"></asp:Label>
-        <br />
         <br />
 &nbsp;<asp:Button ID="ViewUnassignedbtn" runat="server" Text="View All Unasigned Tickets" />
         <br />
@@ -71,7 +71,7 @@
         <br />
         <asp:ListView ID="ListView1" runat="server" DataSourceID="PetAPuppyDefaultView" OnItemDataBound="ListView1_ItemDataBound" >
             <AlternatingItemTemplate>
-                <tr style="">
+                <tr style="background-color: #FFFFFF; border: thin solid #FFFFFF; color: #000000">
                     <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>
@@ -90,7 +90,7 @@
                 </tr>
             </AlternatingItemTemplate>
             <EditItemTemplate>
-                <tr style="">
+                <tr style="background-color: #FFFFFF; border: thin solid #FFFFFF; color: #000000">
                     <td>
                         <asp:Button ID="UpdateButton" runat="server" CommandName="Update" Text="Update" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Cancel" />
@@ -120,7 +120,7 @@
                 </table>
             </EmptyDataTemplate>
             <InsertItemTemplate>
-                <tr style="">
+                <tr style="background-color: #FFFFFF; border: thin solid #FFFFFF; color: #000000">
                     <td>
                         <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
@@ -141,7 +141,7 @@
                 </tr>
             </InsertItemTemplate>
             <ItemTemplate>
-                <tr style="color: #000000" runat="server" id="_itemrow">
+                <tr style="background-color: #FFFFFF; border: thin solid #FFFFFF; color: #000000" runat="server" id="_itemrow">
                     <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>
@@ -165,8 +165,8 @@
                 <table runat="server">
                     <tr runat="server">
                         <td runat="server">
-                            <table id="itemPlaceholderContainer" runat="server" border="0" style="border: medium solid #FFFFFF; left: 27%; top: 28%; position: absolute; height: 500px; width: 800px; font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: normal; vertical-align: middle; text-align: center; overflow: auto; display: table-column-group; color: #FFFFFF; text-transform: none; font-variant: normal; font-style: normal; font-weight: normal;">
-                                <tr runat="server" style="border: medium solid #FFFFFF; color: #FFFFFF">
+                            <table id="itemPlaceholderContainer" runat="server" border="0" style="border: medium solid #FFFFFF; left: 25%; top: 28%; position: absolute; height: 500px; width: 800px; font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: normal; vertical-align: middle; text-align: center; overflow: auto; display: table-column-group; color: #FFFFFF; text-transform: none; font-variant: normal; font-style: normal; font-weight: normal;">
+                                <tr runat="server" style="border: medium solid #000000; color: #000000; background-color: #FFFFFF;">
                                     <th runat="server">Id</th>
                                     <th runat="server">ReportName</th>
                                     <th runat="server">TicketCreateDate</th>
@@ -179,7 +179,7 @@
                         </td>
                     </tr>
                     <tr runat="server">
-                        <td runat="server" style=""></td>
+                        <td runat="server" style="background-color: #FFFFFF; border: thin solid #FFFFFF; color: #000000"></td>
                     </tr>
                 </table>
             </LayoutTemplate>
@@ -203,40 +203,44 @@
                 </tr>
             </SelectedItemTemplate>
         </asp:ListView>
-        <asp:SqlDataSource ID="PetAPuppyDefaultView" runat="server" ConnectionString="<%$ ConnectionStrings:PetAPuppyWilliamWrightConnectionString %>" SelectCommand="SELECT [Id], [ReportName], [TicketCreateDate], [Queue], [TechUserName] FROM [Tickets] ORDER BY [TicketCreateDate]"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="PetAPuppyDefaultView" runat="server" ConnectionString="<%$ ConnectionStrings:PetAPuppyWilliamWrightConnectionString %>" SelectCommand="SELECT Id, ReportName, TicketCreateDate, Queue, ErrorType , TechUserName,ErrorDecription  FROM Tickets ORDER BY TicketCreateDate"></asp:SqlDataSource>
     </p>
     <p class="auto-style10">
-        Tech User Settings<br />
+        Technician User Settings<br />
         <br />
-        <asp:Button ID="Button8" runat="server" CssClass="auto-style11" Height="25px" Text="Add A New Tech" Width="129px" OnClick="Button8_Click" />
+        Current Signed In Technician<br />
+        <asp:Label ID="Usernamesignedinlbl" runat="server" Text="%Username%"></asp:Label>
+        <br />
+        <asp:Button ID="Button9" runat="server" Font-Size="Smaller" Height="20px" OnClick="Button9_Click" Text="Signout" Width="70px" />
+        <br />
+        <br />
+        Technician Options<br />
+        <br />
+        <asp:Button ID="Button8" runat="server" CssClass="auto-style11" Height="25px" Text="Add A New Technician" Width="154px" OnClick="Button8_Click" />
         <br />
         OR<br />
-        Enter Tech Username<br />
-        <asp:TextBox ID="TechChanebox" runat="server" Width="140px"></asp:TextBox>
+        Enter Technician Username<br />
+        <asp:TextBox ID="TechChanebox" runat="server" Width="152px"></asp:TextBox>
         <br />
         <br />
-        <asp:Button ID="RemoveTech" runat="server" CssClass="auto-style11" Height="25px" Text="Remove A Tech" Width="135px" OnClick="RemoveTech_Click" />
+        <asp:Button ID="RemoveTech" runat="server" CssClass="auto-style11" Height="25px" Text="Remove Technician" Width="158px" OnClick="RemoveTech_Click" />
         <br />
-        <asp:Label ID="RemovedTechlbl" runat="server" ForeColor="#CC0000" Text="Tech Removed" Visible="False"></asp:Label>
+        <asp:Label ID="RemovedTechlbl" runat="server" ForeColor="#CC0000" Text="Technician Removed" Visible="False"></asp:Label>
         <br />
-        <asp:Button ID="EditTEech" runat="server" CssClass="auto-style11" Height="25px" Text="Edit A Current Tech" Width="134px" OnClick="EditTEech_Click" />
+        <asp:Button ID="EditTEech" runat="server" CssClass="auto-style11" Height="25px" Text="Edit Technician Settings" Width="161px" OnClick="EditTEech_Click" />
+    </p>
+    <p class="auto-style12">
+        Current System Stats<br />
+        <br />
+        <asp:Image ID="DatabaseStatusphoto" runat="server" Height="64px" ImageUrl="~/icon/icons8-checkmark-64.png" Width="64px" />
+        <br />
+        System Online<br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
     </p>
     <p class="auto-style8">
     </p>
-    <p class="auto-style12">
-        Ticket Sorting Settings<br />
-        <br />
-        <asp:Button ID="Button3" runat="server" CssClass="auto-style11" Height="25px" Text="View All Open Tickets" Width="144px" />
-        <br />
-        <br />
-        <asp:Button ID="Button4" runat="server" CssClass="auto-style11" Height="25px" Text="View Assigned Tickets" Width="144px" />
-        <br />
-        <br />
-        <asp:Button ID="Button5" runat="server" CssClass="auto-style11" Height="25px" Text="View Closed Tickets" Width="142px" />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-    </p>
-</asp:Content>
+    </asp:Content>

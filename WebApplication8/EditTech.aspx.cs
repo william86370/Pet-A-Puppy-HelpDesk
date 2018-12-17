@@ -22,13 +22,13 @@ namespace PetaPuppy
                 usertoedit = Session["techtoedit"].ToString();
                 TextBox1.Text = usertoedit;
                 TextBox1.ReadOnly = true;
-                create.Visible = true;
-                editlbl.Visible = false;
+                create.Visible = false;
+                editlbl.Visible = true;
             }
             else
             {
-                create.Visible = false;
-                editlbl.Visible = true;
+                create.Visible = true;
+                editlbl.Visible = false;
             }
         }
 
@@ -63,6 +63,12 @@ namespace PetaPuppy
             Session["status"] = "Successfully Edited Users";
             Server.Transfer("~/TechSupportMain.aspx");
            
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            Session["status"] = "Cancled";
+            Server.Transfer("~/TechSupportMain.aspx");
         }
     }
 }

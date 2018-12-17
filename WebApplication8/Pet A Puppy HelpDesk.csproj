@@ -85,6 +85,7 @@
     <Content Include="icon\Bright-Blue1.jpg" />
     <Content Include="icon\dogicon.png" />
     <Content Include="icon\download.jpg" />
+    <Content Include="icon\icons8-checkmark-64.png" />
     <Content Include="StyleSheet1.css" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>

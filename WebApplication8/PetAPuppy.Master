@@ -49,6 +49,7 @@
         .Backround {
             background-image: none;
             background-repeat: no-repeat;
+            background-color: #CCCCCC;
         }
         .auto-style7 {
             border-left: 1px none #FFFFFF;
@@ -84,9 +85,9 @@
 &nbsp;&nbsp;
                 <asp:Image ID="Image1" runat="server" CssClass="auto-style6" Height="77px" ImageUrl="~/icon/dogicon.png" Width="92px" />
 &nbsp;&nbsp; Pet A Puppy<span class="NavbarButton">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="ErrorReportButton" runat="server" BorderStyle="None" CssClass="NavbarButtonText" Height="26px" Text="Error Reporting" Width="111px" />
+                <asp:Button ID="ErrorReportButton" runat="server" BorderStyle="None" CssClass="NavbarButtonText" Height="26px" Text="Error Reporting" Width="111px" OnClientClick="Report" />
 &nbsp;&nbsp;&nbsp;&nbsp;
-                <asp:Button ID="Techloginbtn" runat="server" BorderStyle="None" CssClass="NavbarButtonText" Height="26px" Text="Tech Login" Width="111px" />
+                <asp:Button ID="Techloginbtn" runat="server" BorderStyle="None" CssClass="NavbarButtonText" Height="26px" Text="Tech Login" Width="111px" OnClientClick="Login" />
                 </span>
                 <br class="auto-style4" />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;

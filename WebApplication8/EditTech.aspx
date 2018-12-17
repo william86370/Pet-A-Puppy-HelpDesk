@@ -12,8 +12,8 @@
             position: absolute;
             left: 40%;
             width: 286px;
-            height: 264px;
-            top: 18%;
+            height: 281px;
+            top: 15%;
         }
         .auto-style10 {
             border-left: 1px none #FFFFFF;
@@ -38,14 +38,16 @@
         <br />
         <br />
         Username<br />
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox1" runat="server" Width="173px"></asp:TextBox>
         <br />
         Password<br />
-        <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+        <asp:TextBox ID="TextBox2" runat="server" Width="173px"></asp:TextBox>
         <br />
         <br />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click1" Text="Submit To Database" Width="132px" />
         <br />
+        <br />
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Cancel" Width="132px" />
     </p>
     <p class="auto-style10">
         &nbsp;</p>

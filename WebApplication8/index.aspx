@@ -87,7 +87,6 @@
     Password<br />
     <asp:TextBox ID="PasswordBox" runat="server" Width="175px"></asp:TextBox>
     <br />
-    <br />
     <asp:Label ID="Loginerrorlbl" runat="server" ForeColor="#CC3300" Text="Incorect Login" Visible="False"></asp:Label>
     <br />
     <asp:Button ID="LoginButton" runat="server" Text="Login" OnClick="LoginButton_Click" Width="85px" />

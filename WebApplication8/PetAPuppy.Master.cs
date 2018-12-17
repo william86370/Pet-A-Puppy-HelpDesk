@@ -9,6 +9,16 @@ namespace PetaPuppy
 {
     public partial class Site2 : System.Web.UI.MasterPage
     {
+        protected void Login(object sender, EventArgs e)
+        {
+            Server.Transfer("~/index.aspx");
+        }
+        protected void Report(object sender, EventArgs e)
+        {
+            Server.Transfer("~/SupportTicket.aspx");
+        }
+
+
         protected void Page_Load(object sender, EventArgs e)
         {
 

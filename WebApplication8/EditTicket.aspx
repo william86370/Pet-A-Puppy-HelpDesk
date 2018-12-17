@@ -14,10 +14,10 @@
             vertical-align: middle;
             left: 0px;
             top: 0px;
-            height: 733px;
+            height: 820px;
         }
         .auto-style9 {
-            height: 697px;
+            height: 720px;
             margin-top: 0px;
             background-color: #474F53;
             margin-bottom: 0px;
@@ -28,7 +28,7 @@
             position: absolute;
             left: 36%;
             top: 15%;
-            right: 851px;
+            right: 835px;
         }
     .auto-style10 {
         margin-left: 0px;
@@ -39,32 +39,35 @@
     <p class="auto-style8">
         <br />
         <br />
+        <asp:SqlDataSource ID="getusers" runat="server" ConnectionString="<%$ ConnectionStrings:PetAPuppyWilliamWrightConnectionString %>" SelectCommand="SELECT [TechUserName] FROM [Users]"></asp:SqlDataSource>
     </p>
     <p class="auto-style9">
     <br />
-        <asp:Label ID="Label1" runat="server" Text="Editing Report: "></asp:Label>
+        <asp:Label ID="Reportnamelbl" runat="server" Text="Editing Report: "></asp:Label>
         <br />
+        <asp:Label ID="datecreated" runat="server" Text="Created"></asp:Label>
     <br />
     Report Name:
-    <asp:TextBox ID="ReportNamebox" runat="server" Width="252px"></asp:TextBox>
+    <asp:TextBox ID="ReportNamebox2" runat="server" Width="252px"></asp:TextBox>
     <br />
         User&#39;s Username:
-    <asp:TextBox ID="UsernameBox" runat="server" Width="252px"></asp:TextBox>
+    <asp:TextBox ID="UsernameBox2" runat="server" Width="252px"></asp:TextBox>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
     <br />
 &nbsp;User&#39;s Email:
-    <asp:TextBox ID="EmailBox" runat="server" Width="252px"></asp:TextBox>
+    <asp:TextBox ID="EmailBox2" runat="server" Width="252px"></asp:TextBox>
     <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Decription Of Error<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="DescriptionBox" runat="server" Height="150px" OnTextChanged="TextBox4_TextChanged" Width="322px"></asp:TextBox>
+    <asp:TextBox ID="DescriptionBox2" runat="server" Height="150px" OnTextChanged="TextBox4_TextChanged" Width="322px" Rows="12" TextMode="MultiLine"></asp:TextBox>
     <br />
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Steps To Create Error<br />
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <asp:TextBox ID="StepsBox" runat="server" Height="150px" Width="322px"></asp:TextBox>
+    <asp:TextBox ID="StepsBox2" runat="server" Height="150px" Width="322px" Rows="10" TextMode="MultiLine"></asp:TextBox>
     <br />
         Change Type Of Crash<br />
     <asp:DropDownList ID="Crashlist" runat="server" CssClass="auto-style10" Height="16px" Width="163px">
+        <asp:ListItem></asp:ListItem>
         <asp:ListItem Value="Crash"></asp:ListItem>
         <asp:ListItem Value="False Information"></asp:ListItem>
         <asp:ListItem Value="Account Issue"></asp:ListItem>
@@ -80,11 +83,14 @@
     </asp:DropDownList>
         <br />
         Assign Tech To Ticket<br />
-        <asp:TextBox ID="AssignTechbox" runat="server" Width="156px"></asp:TextBox>
+        <asp:DropDownList ID="AssignTechbox" runat="server" DataSourceID="getusers" DataTextField="TechUserName" DataValueField="TechUserName">
+        </asp:DropDownList>
         <br />
     <br />
-    <asp:Button ID="SubmitReportbtn" runat="server" OnClick="SubmitReportbtn_Click" Text="Submit Report" Width="134px" />
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Save Edits" Width="128px" />
+        <br />
     <br />
+        <asp:Button ID="Button1" runat="server" Height="24px" OnClick="Button1_Click" Text="Cancel" Width="129px" />
     <br />
     <br />
     <br />
