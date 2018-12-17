@@ -62,12 +62,17 @@ namespace PetaPuppy
                 {
                     Loginerrorlbl.Visible = true;//the user existed so we show that
                     Loginerrorlbl.Text = usernamereturn;//this is for testing
-                    Session["user"] = usernamereturn;//store the users username in storage for the next page
-                    Session["TransferKey"] = "8637007368";//this key is used to verify that the person requesting the page isnt trying to hack into the system
+                    Session["Tech"] = usernamereturn;//store the users username in storage for the next page
+                    Session["verify"] = "8637007368";//this key is used to verify that the person requesting the page isnt trying to hack into the system
                     Server.Transfer("~/TechSupportMain.aspx");//transfer to Tech Support Main Page
 
                 }
             }
+        }
+
+        protected void Supportticketbtn_Click(object sender, EventArgs e)
+        {
+            Server.Transfer("~/SupportTicket.aspx");//transfer to Tech Support Main Page
         }
     }
 }

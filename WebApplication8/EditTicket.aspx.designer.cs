@@ -10,132 +10,96 @@
 namespace PetaPuppy {
     
     
-    public partial class WebForm5 {
+    public partial class WebForm6 {
         
         /// <summary>
-        /// USernamelbl control.
+        /// Label1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label USernamelbl;
+        protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// ViewUnassignedbtn control.
+        /// ReportNamebox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button ViewUnassignedbtn;
+        protected global::System.Web.UI.WebControls.TextBox ReportNamebox;
         
         /// <summary>
-        /// TicketEditBox control.
+        /// UsernameBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TicketEditBox;
+        protected global::System.Web.UI.WebControls.TextBox UsernameBox;
         
         /// <summary>
-        /// EditTicketbtn control.
+        /// EmailBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EditTicketbtn;
+        protected global::System.Web.UI.WebControls.TextBox EmailBox;
         
         /// <summary>
-        /// ListView1 control.
+        /// DescriptionBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListView ListView1;
+        protected global::System.Web.UI.WebControls.TextBox DescriptionBox;
         
         /// <summary>
-        /// PetAPuppyDefaultView control.
+        /// StepsBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource PetAPuppyDefaultView;
+        protected global::System.Web.UI.WebControls.TextBox StepsBox;
         
         /// <summary>
-        /// Button8 control.
+        /// Crashlist control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button8;
+        protected global::System.Web.UI.WebControls.DropDownList Crashlist;
         
         /// <summary>
-        /// TechChanebox control.
+        /// Priority control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TechChanebox;
+        protected global::System.Web.UI.WebControls.DropDownList Priority;
         
         /// <summary>
-        /// RemoveTech control.
+        /// AssignTechbox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button RemoveTech;
+        protected global::System.Web.UI.WebControls.TextBox AssignTechbox;
         
         /// <summary>
-        /// RemovedTechlbl control.
+        /// SubmitReportbtn control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label RemovedTechlbl;
-        
-        /// <summary>
-        /// EditTEech control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button EditTEech;
-        
-        /// <summary>
-        /// Button3 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
-        
-        /// <summary>
-        /// Button4 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
-        
-        /// <summary>
-        /// Button5 control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button5;
+        protected global::System.Web.UI.WebControls.Button SubmitReportbtn;
     }
 }

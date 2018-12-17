@@ -54,21 +54,21 @@
     .auto-style11 {
         font-size: medium;
     }
-        .Textbox {
-            height: 349px;
-            margin-top: 0px;
-            background-color: #474F53;
-            margin-bottom: 0px;
-            font-size: large;
-            color: #FFFFFF;
-            width: 419px;
-            margin-left: 0px;
-            position: absolute;
-            left: 40%;
-            top: 15%;
-            right: 871px;
-        }
-    </style>
+    .Textbox {
+        height: 349px;
+        margin-top: 0px;
+        background-color: #474F53;
+        margin-bottom: 0px;
+        font-size: large;
+        color: #FFFFFF;
+        width: 419px;
+        margin-left: 0px;
+        position: absolute;
+        left: 40%;
+        top: 15%;
+        right: 871px;
+    }
+</style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <p class="auto-style9">
@@ -95,6 +95,6 @@
     <br />
     OR<br />
     <br />
-    <asp:Button ID="Supportticketbtn" runat="server" Text="Create New Support Ticket" />
+    <asp:Button ID="Supportticketbtn" runat="server" Text="Create New Support Ticket" OnClick="Supportticketbtn_Click" />
 </p>
 </asp:Content>

@@ -96,6 +96,8 @@
     <Content Include="SupportTicket.aspx" />
     <Content Include="ReportSubmitRedirect.aspx" />
     <Content Include="TechSupportMain.aspx" />
+    <Content Include="EditTicket.aspx" />
+    <Content Include="EditTech.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -161,6 +163,20 @@
     </Compile>
     <Compile Include="TechSupportMain.aspx.designer.cs">
       <DependentUpon>TechSupportMain.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditTicket.aspx.cs">
+      <DependentUpon>EditTicket.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditTicket.aspx.designer.cs">
+      <DependentUpon>EditTicket.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="EditTech.aspx.cs">
+      <DependentUpon>EditTech.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditTech.aspx.designer.cs">
+      <DependentUpon>EditTech.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

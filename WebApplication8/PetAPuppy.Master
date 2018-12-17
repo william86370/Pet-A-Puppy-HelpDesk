@@ -49,7 +49,6 @@
         .Backround {
             background-image: none;
             background-repeat: no-repeat;
-            background-color: #808080;
         }
         .auto-style7 {
             border-left: 1px none #FFFFFF;
