@@ -19,7 +19,7 @@ namespace PetaPuppy
             {
                var ticketID = Session["TicketID"].ToString();//get the ID of the Error Report to LOAD in To The screen
                                                           //we now haveto load the database into strings to give us our values
-                string connStr = ConfigurationManager.ConnectionStrings["PetAPuppy"].ConnectionString;//this allows us to update the sql name to our azure server later on
+                string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
                 SqlDataReader usernameRdr = null;//the object to hald all the info from our command
                 using (var con = new SqlConnection(connStr))//when we connect to sql database
                 {
@@ -28,7 +28,7 @@ namespace PetaPuppy
                     
                     using (var cmd = new SqlCommand(sql, con))//build the commmand
                     {
-                        cmd.Parameters.AddWithValue("@ReportName", 1);// ticketID);//send username entered
+                        cmd.Parameters.AddWithValue("@ReportName", ticketID);// ticketID);//send username entered
 
                         usernameRdr = cmd.ExecuteReader();
                         while (usernameRdr.Read())
@@ -75,7 +75,7 @@ namespace PetaPuppy
         {
             string Loggedintech = Session["Tech"].ToString();
             string acesscode = Session["verify"].ToString();
-            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppy"].ConnectionString;//this allows us to update the sql name to our azure server later on
+            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
 
             using (var con = new SqlConnection(connStr))//when we connect to sql database
             {

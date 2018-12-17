@@ -35,7 +35,7 @@ namespace PetaPuppy
             }
             if (passwordgood == true && usernamegood == true)
             {
-                string connStr = ConfigurationManager.ConnectionStrings["PetAPuppy"].ConnectionString;//this allows us to update the sql name to our azure server later on
+                string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
                 string usernamereturn;//the username from sql
                 using (var con = new SqlConnection(connStr))//when we connect to sql database
                 {

@@ -35,7 +35,7 @@ namespace PetaPuppy
 
         protected void Button1_Click1(object sender, EventArgs e)
         {
-            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppy"].ConnectionString;//this allows us to update the sql name to our azure server later on
+            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
             string usernamereturn;//the username from sql
             using (var con = new SqlConnection(connStr))//when we connect to sql database
             {

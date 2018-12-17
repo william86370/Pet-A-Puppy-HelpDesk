@@ -27,7 +27,7 @@ namespace PetaPuppy
             //first do error checking to make sure that the user put the report in correctly
 
             //after error checking we can add the value to the SQL DataBase
-            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppy"].ConnectionString;//this allows us to update the sql name to our azure server later on
+            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
             string sqlreturn;//the return from sql
             using (var con = new SqlConnection(connStr))//when we connect to sql database
             {

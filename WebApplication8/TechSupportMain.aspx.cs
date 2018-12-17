@@ -8,6 +8,7 @@ using System.Web.UI.HtmlControls;
 using System.Web.UI.WebControls;
 using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace PetaPuppy
 {
@@ -38,12 +39,18 @@ namespace PetaPuppy
                 if (System.DateTime.Now.Day-policyid.Day > 7)//if the days are greater then 7
                 {
                     HtmlTableRow cell = (HtmlTableRow)e.Item.FindControl("_itemrow");//get the row value set
-                    cell.Style.Add("background-color", "Red");//set to red
+                    if (cell != null)
+                    {
+                        cell.Style.Add("background-color", "Red");//set to red
+                    }
                 }
                else if (System.DateTime.Now.Day - policyid.Day > 3)//if the days are more then 3
                 {
                     HtmlTableRow cell = (HtmlTableRow)e.Item.FindControl("_itemrow");//get the row ID
-                    cell.Style.Add("background-color", "Yellow");//set it to yellow
+                    if (cell != null)
+                    {
+                        cell.Style.Add("background-color", "Yellow");//set it to yellow
+                    }
                 }
             }
         }
@@ -68,7 +75,7 @@ namespace PetaPuppy
         {
             if (TechChanebox.Text != "")
             {
-                string connStr = ConfigurationManager.ConnectionStrings["PetAPuppy"].ConnectionString;//this allows us to update the sql name to our azure server later on
+                string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
                 string sqlreturn;//the return from sql
                 using (var con = new SqlConnection(connStr))//when we connect to sql database
                 {
@@ -110,6 +117,97 @@ namespace PetaPuppy
         protected void Button9_Click(object sender, EventArgs e)
         {
             Server.Transfer("~/index.aspx");
+        }
+
+        protected void ViewUnassignedbtn_Click(object sender, EventArgs e)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            SqlCommand command = conn.CreateCommand();
+            Loggedintech = Session["Tech"].ToString();
+            command.CommandText = "SELECT Id, TechUserName, ReportName, TicketCreateDate, Queue, ErrorType, ErrorDecription FROM Tickets WHERE(TechUserName = '"+Loggedintech +"') ORDER BY TicketCreateDate";//this is bad but im tierd
+            
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            ListView1.DataSourceID = null;
+            ListView1.DataSource = null;
+            ListView1.DataSource = dt;
+            ListView1.DataBind();
+            conn.Close();
+        }
+
+        protected void Button10_Click(object sender, EventArgs e)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            SqlCommand command = conn.CreateCommand();
+            Loggedintech = Session["Tech"].ToString();
+            command.CommandText = "SELECT Id, TechUserName,ReportName, TicketCreateDate, Queue, ErrorType , ErrorDecription  FROM Tickets ORDER BY TicketCreateDate";//sort all data value
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            ListView1.DataSourceID = null;
+            ListView1.DataSource = null;
+            ListView1.DataSource = dt;
+            ListView1.DataBind();
+            conn.Close();
+        }
+
+        protected void Button11_Click(object sender, EventArgs e)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            SqlCommand command = conn.CreateCommand();
+            Loggedintech = Session["Tech"].ToString();
+            command.CommandText = "SELECT Id, TechUserName,ReportName, TicketCreateDate, Queue, ErrorType , ErrorDecription  FROM Tickets ORDER BY TechUserName";//sort all data value
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            ListView1.DataSourceID = null;
+            ListView1.DataSource = null;
+            ListView1.DataSource = dt;
+            ListView1.DataBind();
+            conn.Close();
+        }
+
+        protected void Button12_Click(object sender, EventArgs e)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            SqlCommand command = conn.CreateCommand();
+            Loggedintech = Session["Tech"].ToString();
+            command.CommandText = "SELECT Id, TechUserName,ReportName, TicketCreateDate, Queue, ErrorType , ErrorDecription  FROM Tickets ORDER BY ErrorType";//sort all data value
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            ListView1.DataSourceID = null;
+            ListView1.DataSource = null;
+            ListView1.DataSource = dt;
+            ListView1.DataBind();
+            conn.Close();
+        }
+
+        protected void Button13_Click(object sender, EventArgs e)
+        {
+            string connStr = ConfigurationManager.ConnectionStrings["PetAPuppyWilliamWrightConnectionString"].ConnectionString;//this allows us to update the sql name to our azure server later on
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            SqlCommand command = conn.CreateCommand();
+            Loggedintech = Session["Tech"].ToString();
+            command.CommandText = "SELECT Id, TechUserName,ReportName, TicketCreateDate, Queue, ErrorType , ErrorDecription  FROM Tickets ORDER BY TicketCreateDate DESC";//sort all data value
+            SqlDataAdapter da = new SqlDataAdapter(command);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            ListView1.DataSourceID = null;
+            ListView1.DataSource = null;
+            ListView1.DataSource = dt;
+            ListView1.DataBind();
+            conn.Close();
         }
     }
 }

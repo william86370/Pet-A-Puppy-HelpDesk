@@ -51,6 +51,25 @@
             margin-bottom: 0px;
             margin-top: 0px;
         }
+        .auto-style13 {
+            font-family: "Arial Narrow";
+            font-size: medium;
+            color: #FFFFFF;
+            vertical-align: middle;
+            text-align: center;
+            background-color: #474F53;
+            position: absolute;
+            width: 11%;
+            height: 30%;
+            top: 15%;
+            left: 6%;
+            margin-bottom: 0px;
+            margin-top: 0px;
+        }
+        .newStyle2 {
+        position: absolute;
+        left: 20%;
+    }
         </style>
 </asp:Content>
 
@@ -60,8 +79,7 @@
         <br />
         <asp:Label ID="USernamelbl" runat="server" Text="Welcome %USERNAME%"></asp:Label>
         <br />
-&nbsp;<asp:Button ID="ViewUnassignedbtn" runat="server" Text="View All Unasigned Tickets" />
-        <br />
+&nbsp;<br />
         Edit Ticket
         <br />
         Enter Ticket ID:<asp:TextBox ID="TicketEditBox" runat="server"></asp:TextBox>
@@ -71,10 +89,14 @@
         <br />
         <asp:ListView ID="ListView1" runat="server" DataSourceID="PetAPuppyDefaultView" OnItemDataBound="ListView1_ItemDataBound" >
             <AlternatingItemTemplate>
-                <tr style="background-color: #FFFFFF; border: thin solid #FFFFFF; color: #000000">
+                <tr style="background-color: #FFFFFF; border: thin solid #FFFFFF; color: #000000" id="_itemrow">
                     <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>
+                    <td>
+                        <asp:Label ID="TechUserNameLabel" runat="server" Text='<%# Eval("TechUserName") %>' />
+                    </td>
+                    
                     <td>
                         <asp:Label ID="ReportNameLabel" runat="server" Text='<%# Eval("ReportName") %>' />
                     </td>
@@ -85,7 +107,10 @@
                         <asp:Label ID="QueueLabel" runat="server" Text='<%# Eval("Queue") %>' />
                     </td>
                     <td>
-                        <asp:Label ID="TechUserNameLabel" runat="server" Text='<%# Eval("TechUserName") %>' />
+                        <asp:Label ID="ErrorTypeLabel" runat="server" Text='<%# Eval("ErrorType") %>' />
+                    </td>
+                    <td>
+                        <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Eval("ErrorDecription") %>' />
                     </td>
                 </tr>
             </AlternatingItemTemplate>
@@ -120,7 +145,7 @@
                 </table>
             </EmptyDataTemplate>
             <InsertItemTemplate>
-                <tr style="background-color: #FFFFFF; border: thin solid #FFFFFF; color: #000000">
+                <tr style="background-color: #FFFFFF; border: thin solid #FFFFFF; color: #000000" id="_itemrow">
                     <td>
                         <asp:Button ID="InsertButton" runat="server" CommandName="Insert" Text="Insert" />
                         <asp:Button ID="CancelButton" runat="server" CommandName="Cancel" Text="Clear" />
@@ -142,22 +167,27 @@
             </InsertItemTemplate>
             <ItemTemplate>
                 <tr style="background-color: #FFFFFF; border: thin solid #FFFFFF; color: #000000" runat="server" id="_itemrow">
-                    <td>
+                   <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>
+                    <td>
+                        <asp:Label ID="TechUserNameLabel" runat="server" Text='<%# Eval("TechUserName") %>' />
+                    </td>
+                    
                     <td>
                         <asp:Label ID="ReportNameLabel" runat="server" Text='<%# Eval("ReportName") %>' />
                     </td>
                     <td>
-                        
-                             <asp:Label ID="TicketCreateDateLabel" runat="server" Text='<%# Eval("TicketCreateDate") %>' />
-                       
+                        <asp:Label ID="TicketCreateDateLabel" runat="server" Text='<%# Eval("TicketCreateDate") %>' />
                     </td>
                     <td>
                         <asp:Label ID="QueueLabel" runat="server" Text='<%# Eval("Queue") %>' />
                     </td>
                     <td>
-                        <asp:Label ID="TechUserNameLabel" runat="server" Text='<%# Eval("TechUserName") %>' />
+                        <asp:Label ID="ErrorTypeLabel" runat="server" Text='<%# Eval("ErrorType") %>' />
+                    </td>
+                    <td>
+                        <asp:Label ID="DescriptionLabel" runat="server" Text='<%# Eval("ErrorDecription") %>' />
                     </td>
                 </tr>
             </ItemTemplate>
@@ -165,13 +195,15 @@
                 <table runat="server">
                     <tr runat="server">
                         <td runat="server">
-                            <table id="itemPlaceholderContainer" runat="server" border="0" style="border: medium solid #FFFFFF; left: 25%; top: 28%; position: absolute; height: 500px; width: 800px; font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: normal; vertical-align: middle; text-align: center; overflow: auto; display: table-column-group; color: #FFFFFF; text-transform: none; font-variant: normal; font-style: normal; font-weight: normal;">
+                            <table id="itemPlaceholderContainer" runat="server" border="0" style="border: medium solid #FFFFFF; left: 23%; top: 28%; position: absolute; height: 53%; width: 43%; font-family: Arial, Helvetica, sans-serif; font-size: medium; line-height: normal; vertical-align: middle; text-align: center; overflow: auto; display: table-column-group; color: #FFFFFF; text-transform: none; font-variant: normal; font-style: normal; font-weight: normal;">
                                 <tr runat="server" style="border: medium solid #000000; color: #000000; background-color: #FFFFFF;">
                                     <th runat="server">Id</th>
-                                    <th runat="server">ReportName</th>
-                                    <th runat="server">TicketCreateDate</th>
+                                    <th runat="server">Technician UserName</th>
+                                    <th runat="server">Report Name</th>
+                                    <th runat="server">Ticket Create Date</th>
                                     <th runat="server">Queue</th>
-                                    <th runat="server">TechUserName</th>
+                                    <th runat="server">Report Type</th>
+                                    <th runat="server">Report Decription</th>
                                 </tr>
                                 <tr id="itemPlaceholder" runat="server">
                                 </tr>
@@ -184,7 +216,7 @@
                 </table>
             </LayoutTemplate>
             <SelectedItemTemplate>
-                <tr style="">
+                <tr style="" id="_itemrow">
                     <td>
                         <asp:Label ID="IdLabel" runat="server" Text='<%# Eval("Id") %>' />
                     </td>
@@ -203,7 +235,7 @@
                 </tr>
             </SelectedItemTemplate>
         </asp:ListView>
-        <asp:SqlDataSource ID="PetAPuppyDefaultView" runat="server" ConnectionString="<%$ ConnectionStrings:PetAPuppyWilliamWrightConnectionString %>" SelectCommand="SELECT Id, ReportName, TicketCreateDate, Queue, ErrorType , TechUserName,ErrorDecription  FROM Tickets ORDER BY TicketCreateDate"></asp:SqlDataSource>
+        <asp:SqlDataSource ID="PetAPuppyDefaultView" runat="server" ConnectionString="<%$ ConnectionStrings:PetAPuppyWilliamWrightConnectionString %>" SelectCommand="SELECT Id, TechUserName,ReportName, TicketCreateDate, Queue, ErrorType , ErrorDecription  FROM Tickets ORDER BY TicketCreateDate" ProviderName="<%$ ConnectionStrings:PetAPuppyWilliamWrightConnectionString.ProviderName %>"></asp:SqlDataSource>
     </p>
     <p class="auto-style10">
         Technician User Settings<br />
@@ -235,10 +267,30 @@
         <asp:Image ID="DatabaseStatusphoto" runat="server" Height="64px" ImageUrl="~/icon/icons8-checkmark-64.png" Width="64px" />
         <br />
         System Online<br />
+        Database Ready<br />
+        Azure Ready<br />
         <br />
         <br />
         <br />
         <br />
+        <br />
+    </p>
+    <p class="auto-style13">
+        Sorting Settings<br />
+        <br />
+        <asp:Button ID="ViewUnassignedbtn0" runat="server" Text="View Your Assigned Tickets" OnClick="ViewUnassignedbtn_Click" Width="179px" />
+        <br />
+        <br />
+        <asp:Button ID="Button10" runat="server" OnClick="Button10_Click" Text="View All Tickets" Width="181px" />
+        <br />
+        <br />
+        <asp:Button ID="Button11" runat="server" OnClick="Button11_Click" Text="Sort By Technician" Width="183px" />
+        <br />
+        <br />
+        <asp:Button ID="Button12" runat="server" OnClick="Button12_Click" Text="Sort By Report Type" Width="183px" />
+        <br />
+        <br />
+        <asp:Button ID="Button13" runat="server" OnClick="Button13_Click" Text="Sort By Newest Tickets" Width="183px" />
         <br />
     </p>
     <p class="auto-style8">
